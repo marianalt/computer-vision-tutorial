@@ -24,7 +24,12 @@ cv.imshow('Cat', img)
 # cv.imshow('Eroded', eroded)
 
 # Resize
-resized = cv.resize(img, (800,800), interpolation=cv.INTER_CUBIC) #useful to scale the image, slowest but has more quality
-cv.imshow('Resized', resized)
+# resized = cv.resize(img, (800,800), interpolation=cv.INTER_CUBIC) #useful to scale the image, slowest but has more quality
+# cv.imshow('Resized', resized)
+
+# Cropping - array slicing
+cropped = img[50:200, 200:400]
+cv.imshow('Cropped', cropped)
+
 
 cv.waitKey(0)
