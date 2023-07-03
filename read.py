@@ -1,17 +1,32 @@
 import cv2 as cv
 
-#to read an image, returns the matrix of pixels
+# Reading images -------------------------
+
+'''
 img = cv.imread('Photos/kitten.jpg')
-#img = cv.imread('Photos/Kitty.jpg')
-
-#to show the matrix of pixels
-'''
-str - name of the window
-var - matrix of pixels to be shown
-'''
 cv.imshow('kitten', img)
-#cv.imshow('Kitty', img)
+'''
 
-#waiting a delay seconds or a key to be pressed
-'''in this case, wait 0 seconds, so wait infinitely for a key to be pressed'''
-cv.waitKey(0)
+# Reading videos -------------------------
+
+#str or int - path or camera (0/1/2)
+# returns pointer
+capture = cv.VideoCapture('Videos/dog.mp4')
+
+#use a while loop and read video frame by frame
+while True:
+    '''
+    bool - is frame was successfully read or not
+    frame - frame read
+    '''
+    isTrue, frame = capture.read()
+    cv.imshow('Video', frame)
+    
+    #to every frame read, see if 'd' key was pressed
+    if cv.waitKey(20) & 0xFF==ord('d'):
+        break
+
+#if having error -215, the path is probably wrong or there are no frames left to be shown
+#basically, there is nothing to be shown (for images or videos)
+capture.release()
+cv.destroyAllWindows()
