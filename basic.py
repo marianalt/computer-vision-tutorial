@@ -8,7 +8,7 @@ gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Gray', gray)
 
 # Blur - gauss
-blur = cv.GaussianBlur(img, (3,3), cv.BORDER_DEFAULT)
+blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
 cv.waitKey(0)
