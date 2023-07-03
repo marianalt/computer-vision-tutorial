@@ -35,3 +35,4 @@ while True:
 
 capture.release()
 cv.destroyAllWindows()
+#cv.destroyAllWindows() or remove it
