@@ -11,7 +11,7 @@ cv.imshow('Blank', blank)
 # cv.imshow('Green', blank)
 
 # 2. Draw a Rectangle
-cv.rectangle(blank, (0,0), (250,500), (0,255,0), thickness=cv.FILLED)
+cv.rectangle(blank, (0,0), (blank.shape[1]//2,blank.shape[0]//2), (0,255,0), thickness=cv.FILLED)
 #same as: 
 # cv.rectangle(blank, (0,0), (250,500), (0,255,0), thickness=-1)
 cv.imshow('Rectangle', blank)
