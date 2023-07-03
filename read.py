@@ -13,5 +13,5 @@ cv.imshow('kitten', img)
 #cv.imshow('Kitty', img)
 
 #waiting a delay seconds or a key to be pressed
-'''in this case, wait 0 seconds, so wait infinitely for a key to be pressed'''
 cv.waitKey(0)
+'''in this case, wait infinitely for a key to be pressed'''
