@@ -12,7 +12,7 @@ blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
 # Edge Cascade - Canny edge detector
-canny = cv.Canny(img, 125, 175)
+canny = cv.Canny(blur, 125, 175)
 cv.imshow('Canny Edges', canny)
 
 cv.waitKey(0)
