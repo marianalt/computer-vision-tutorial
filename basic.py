@@ -24,7 +24,7 @@ eroded = cv.erode(dilated, (7,7), iterations=3)
 cv.imshow('Eroded', eroded)
 
 # Resize
-resized = cv.resize(img, (800,800), interpolation=cv.INTER_CUBIC) #useful to scale the image, slowest but has more quality
+resized = cv.resize(img, (800,800), interpolation=cv.INTER_CUBIC)
 cv.imshow('Resized', resized)
 
 # Cropping - array slicing
