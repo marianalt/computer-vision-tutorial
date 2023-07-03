@@ -24,7 +24,7 @@ cv.imshow('Cat', img)
 # cv.imshow('Eroded', eroded)
 
 # Resize
-resized = cv.resize(img, (800,800), interpolation=cv.INTER_LINEAR) #useful to scale the image
+resized = cv.resize(img, (800,800), interpolation=cv.INTER_CUBIC) #useful to scale the image
 cv.imshow('Resized', resized)
 
 cv.waitKey(0)
