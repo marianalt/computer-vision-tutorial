@@ -8,6 +8,7 @@ def rescaleFrame(frame, scale=0.75):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 capture = cv.VideoCapture('Videos/kelly.mp4')
+#capture = cv.VideoCapture('Videos/dog_video.mp4')
 
 while True:
     isTrue, frame = capture.read()
