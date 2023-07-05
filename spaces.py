@@ -1,7 +1,11 @@
 import cv2 as cv
+# import matplotlib.pyplot as plt
 
 img = cv.imread('Photos/street.jpg')
 cv.imshow('Street', img)
+
+# plt.imshow(img)
+# plt.show()
 
 # BGR to Grayscale
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
