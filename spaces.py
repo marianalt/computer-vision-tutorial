@@ -23,9 +23,9 @@ cv.imshow('LAB', lab)
 rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 cv.imshow('RGB', rgb)
 
-# HSV to BGR
-hsv_bgr = cv.cvtColor(hsv, cv.COLOR_HSV2BGR)
-cv.imshow('HSV --> BGR', hsv_bgr)
+# Lab to BGR
+lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
+cv.imshow('LAB --> BGR', lab_bgr)
 
 # plt.imshow(rgb)
 # plt.show()
