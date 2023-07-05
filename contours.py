@@ -7,8 +7,11 @@ cv.imshow('Street', img)
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Gray', gray)
 
+blur = cv.GaussianBlur(gray, (5,5), cv.BORDER_DEFAULT)
+cv.imshow('Blur', blur)
+
 # Detect edges, which is different from 
-canny = cv.Canny(gray, 125, 175)
+canny = cv.Canny(blur, 125, 175)
 cv.imshow('Canny Edges', canny)
 
 # RETR_TREE - all detailed contours, EXTERNAL - external contours, LIST - all contours in image
