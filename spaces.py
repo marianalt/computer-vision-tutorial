@@ -23,7 +23,11 @@ cv.imshow('LAB', lab)
 rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 cv.imshow('RGB', rgb)
 
-plt.imshow(rgb)
-plt.show()
+# HSV to BGR
+hsv_bgr = cv.cvtColor(hsv, cv.COLOR_HSV2BGR)
+cv.imshow('HSV --> BGR', hsv_bgr)
+
+# plt.imshow(rgb)
+# plt.show()
 
 cv.waitKey(0)
