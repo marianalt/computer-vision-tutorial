@@ -35,6 +35,9 @@ rotated = rotate(img, -45)
 cv.imshow('Rotated', rotated)
 
 rotated_rotated = rotate(rotated, -45)
-cv.imshow('Rotated2', rotated_rotated)
+cv.imshow('Rotated 2', rotated_rotated)
+
+rotated_corrected = rotate(img, -90)
+cv.imshow('Rotated 3', rotated_corrected)
 
 cv.waitKey(0)
