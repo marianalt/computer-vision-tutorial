@@ -4,12 +4,22 @@ import numpy as np
 img = cv.imread('Photos/countryside.jpg')
 cv.imshow('Street', img)
 
+blank = np.zeros(img.shape[:2], dtype='uint8')
+
 b, g, r = cv.split(img)
 
-#is shown gray cause have a shape of one
-cv.imshow('Blue', b)
-cv.imshow('Green', g)
-cv.imshow('Red', r)
+blue = cv.merge([b, blank, blank])
+green = cv.merge([blank, g, blank])
+red = cv.merge([blank, blank, r])
+
+cv.imshow('Blue', blue)
+cv.imshow('Green', green)
+cv.imshow('Red', red)
+
+# #is shown gray cause have a shape of one
+# cv.imshow('Blue', b)
+# cv.imshow('Green', g)
+# cv.imshow('Red', r)
 
 print(img.shape)
 print(b.shape)
