@@ -10,6 +10,7 @@ cv.imshow('Blank', blank)
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Gray', gray)
 
+# 1st method - find edges cascades with canny edge detector and findContours
 blur = cv.GaussianBlur(gray, (5,5), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
@@ -17,6 +18,7 @@ cv.imshow('Blur', blur)
 canny = cv.Canny(blur, 125, 175)
 cv.imshow('Canny Edges', canny)
 
+# 2nd method - binarise the image with cv.threshold and findContours
 # ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
 # cv.imshow('Thresh', thresh)
 
