@@ -27,6 +27,8 @@ cv.imshow('RGB', rgb)
 lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
 cv.imshow('LAB --> BGR', lab_bgr)
 
+# there isnt a method to convert directly between for instance grayscale to LAB
+
 # plt.imshow(rgb)
 # plt.show()
 
