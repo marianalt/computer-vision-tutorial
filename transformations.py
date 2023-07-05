@@ -40,4 +40,13 @@ cv.imshow('Rotated 2', rotated_rotated)
 rotated_corrected = rotate(img, -90)
 cv.imshow('Rotated 3', rotated_corrected)
 
+# Resizing
+resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC)
+cv.imshow('Resized', resized)
+
+# Flipping
+# 0 - V, 1 - H, or -1 - Both.
+flip = cv.flip(img, 0)
+cv.imshow('Flip', flip)
+
 cv.waitKey(0)
